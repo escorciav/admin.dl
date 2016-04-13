@@ -1,0 +1,14 @@
+---
+# Adds ssh fingerprints from host to known_hosts in head-node
+- hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+
+  - name: Get fingerprints
+    command: /usr/bin/ssh-keyscan -T 10 {{ ansible_host }}
+    register: keyscan
+  
+  - name: Write fingerprint on known_hosts
+    lineinfile: name=~/.ssh/known_hosts create=yes line='#Ansible automated:{{ ansible_host }}\n{{ item }}'
+    with_items: '{{ keyscan.stdout_lines }}'

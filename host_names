@@ -1,4 +1,11 @@
+#####
+# File to place on /etc/hosts
+#####
+
 # DL vm (testing purposes)
+10.0.15.21	turing1
+10.0.15.22	turing2
+
 # DL machines
 10.68.74.246    enigma2
 10.68.90.4      enigma3

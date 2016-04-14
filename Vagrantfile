@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
         node.vm.provider "virtualbox" do |vb|
           vb.memory = "256"
         end
+        node.vm.provision :shell, path: "bootstrap_vms.sh"
     end
   end
 

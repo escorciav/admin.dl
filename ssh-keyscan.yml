@@ -1,6 +1,7 @@
 ---
 # Adds ssh fingerprints from host to known_hosts in head-node
 - hosts: all
+  serial: 1
   connection: local
   gather_facts: no
   tasks:

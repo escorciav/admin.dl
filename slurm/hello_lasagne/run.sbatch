@@ -3,9 +3,8 @@
 #
 #SBATCH --array=0-2
 #SBATCH --job-name=example
-#SBATCH --output=/home/escorcv/example/%A_%a.out
-#SBATCH --workdir=/home/escorcv/example
-#SBATCH --gres=gpu:k40:1
+#SBATCH --output=%A_%a.out
+#SBATCH --gres=gpu:1
 #SBATCH -n 1
 #SBATCH --time=00:09:00
 
@@ -22,4 +21,3 @@ done
 
 echo "cuda visible devices: ${CUDA_VISIBLE_DEVICES}"
 THEANO_FLAGS="'device=gpu${CUDA_VISIBLE_DEVICES}'" python example.py ${SLURM_ARRAY_TASK_ID}
-sleep 300

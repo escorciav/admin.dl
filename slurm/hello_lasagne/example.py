@@ -1,4 +1,5 @@
 import sys
+import time
 
 import lasagne
 import numpy as np
@@ -15,3 +16,4 @@ if __name__ == '__main__':
     for i in xrange(1000):
         fn()
     print 'just increment a random tensor {} 1000 times'.format(shape)
+    time.sleep(300)

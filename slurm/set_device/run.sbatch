@@ -9,6 +9,6 @@
 #SBATCH --time=00:09:00
 
 srun hostname
-module load cuda
+module load cuda/7.5
 echo "CUDA_VISIBLE_DEVICES= ${CUDA_VISIBLE_DEVICES}"
 ./set_device.o 0 $SLURM_ARRAY_TASK_ID

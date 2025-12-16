@@ -2,7 +2,7 @@
 
 Postmorten note: watch your steps carefully when uncertainty is high.
 
-Are you a member of IVUL or with access to KAUST Clusters? Check out my [SLURM notes]([url](https://github.com/escorciav/kaust-cluster-status)).
+Are you a member of IVUL or with access to KAUST Clusters? Check out my [SLURM notes](https://github.com/escorciav/kaust-cluster-status).
 
 # Scope
 
